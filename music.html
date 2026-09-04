@@ -6,13 +6,13 @@
     <title>Monarch-Rise Music · Music</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-crown"></i>
+                <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" onerror="this.style.display='none'" />
                 <h1>Monarch-Rise <span>Music</span></h1>
             </div>
             <ul class="nav-links">
@@ -20,6 +20,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="artists.html">Artists</a></li>
                 <li><a href="music.html" class="active">Music</a></li>
+                <li><a href="top100.html">Top 100</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -30,15 +31,13 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Music & Releases</h1>
+            <h1><i class="fas fa-music" style="color: var(--gold);"></i> Music & Releases</h1>
             <p>Discover the latest sounds from Malawi</p>
         </div>
     </section>
 
-    <!-- Music Filter -->
     <section class="music-filter">
         <div class="container">
             <div class="filter-bar">
@@ -51,22 +50,20 @@
         </div>
     </section>
 
-    <!-- Music Grid -->
     <section class="music-grid-section">
         <div class="container">
             <div class="music-grid-full" id="musicGrid">
-                <!-- Music items will be rendered by JavaScript -->
+                <!-- Populated by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <i class="fas fa-crown"></i>
+                        <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" onerror="this.style.display='none'" />
                         <h2>Monarch-Rise <span>Music</span></h2>
                     </div>
                     <p>Where Talent Rises. Where Music Reigns.</p>
@@ -85,6 +82,7 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="artists.html">Artists</a></li>
                         <li><a href="music.html">Music</a></li>
+                        <li><a href="top100.html">Top 100</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -106,6 +104,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Monarch-Rise Music. All rights reserved. Malawi.</p>
+                <p style="color: var(--gold); font-size: 0.8rem; margin-top: 0.3rem;">Developer: Ftech</p>
             </div>
         </div>
     </footer>
