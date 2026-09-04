@@ -6,13 +6,15 @@
     <title>Monarch-Rise Music · Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-crown"></i>
+                <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" />
                 <h1>Monarch-Rise <span>Music</span></h1>
             </div>
             <ul class="nav-links">
@@ -20,6 +22,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="artists.html">Artists</a></li>
                 <li><a href="music.html">Music</a></li>
+                <li><a href="top100.html">Top 100</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -30,10 +33,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Reduced Size -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">Est. 2024</div>
+            <div class="hero-badge"><i class="fas fa-crown"></i> Est. 2024</div>
             <h1>Where Talent Rises.<br /><span>Where Music Reigns.</span></h1>
             <p>Discover the heartbeat of Malawi's music scene. From rising stars to established legends, Monarch-Rise Music is where talent meets opportunity.</p>
             <div class="hero-buttons">
@@ -42,11 +45,25 @@
             </div>
         </div>
         <div class="hero-visual">
-            <div class="hero-crown">
-                <i class="fas fa-crown"></i>
+            <div class="weather-widget">
+                <i class="fas fa-sun"></i>
+                <span>20°C</span>
+                <span>Sunny</span>
             </div>
-            <div class="sound-waves">
-                <span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </section>
+
+    <!-- Top 100 Section - After Hero -->
+    <section class="top100-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-chart-line"></i> Trending</span>
+                <h2>Top 100 Malawi Hits</h2>
+                <p>Voted by fans · Updated daily</p>
+                <a href="top100.html" class="btn-outline" style="margin-top:1rem;">View Full Chart <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="top100-preview-grid" id="top100Preview">
+                <!-- Will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -55,7 +72,7 @@
     <section class="featured-artists">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Featured</span>
+                <span class="section-tag"><i class="fas fa-star"></i> Featured</span>
                 <h2>Rising Stars & Legends</h2>
                 <p>Meet the artists defining Malawi's music future</p>
             </div>
@@ -124,14 +141,14 @@
     <section class="latest-releases">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">New Music</span>
+                <span class="section-tag"><i class="fas fa-music"></i> New Music</span>
                 <h2>Latest Releases</h2>
                 <p>Fresh tracks from Malawi's finest</p>
             </div>
             <div class="release-grid">
                 <div class="release-card">
                     <div class="release-thumb">
-                        <i class="fas fa-music"></i>
+                        <i class="fas fa-headphones"></i>
                         <div class="release-play"><i class="fas fa-play"></i></div>
                     </div>
                     <div class="release-info">
@@ -142,7 +159,7 @@
                 </div>
                 <div class="release-card">
                     <div class="release-thumb">
-                        <i class="fas fa-music"></i>
+                        <i class="fas fa-headphones"></i>
                         <div class="release-play"><i class="fas fa-play"></i></div>
                     </div>
                     <div class="release-info">
@@ -164,7 +181,7 @@
                 </div>
                 <div class="release-card">
                     <div class="release-thumb">
-                        <i class="fas fa-music"></i>
+                        <i class="fas fa-headphones"></i>
                         <div class="release-play"><i class="fas fa-play"></i></div>
                     </div>
                     <div class="release-info">
@@ -200,7 +217,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <i class="fas fa-crown"></i>
+                        <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" />
                         <h2>Monarch-Rise <span>Music</span></h2>
                     </div>
                     <p>Where Talent Rises. Where Music Reigns.</p>
@@ -219,6 +236,7 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="artists.html">Artists</a></li>
                         <li><a href="music.html">Music</a></li>
+                        <li><a href="top100.html">Top 100</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -240,6 +258,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Monarch-Rise Music. All rights reserved. Malawi.</p>
+                <p style="color: var(--gold); font-size: 0.8rem; margin-top: 0.3rem;">Developer: Ftech</p>
             </div>
         </div>
     </footer>

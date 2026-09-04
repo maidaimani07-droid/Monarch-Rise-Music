@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monarch-Rise Music · Top 100</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" />
+                <h1>Monarch-Rise <span>Music</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="top100.html" class="active">Top 100</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-chart-line" style="color: var(--gold);"></i> Top 100 Malawi Hits</h1>
+            <p>Voted by fans · Updated daily · The ultimate chart</p>
+        </div>
+    </section>
+
+    <!-- Top 100 Full List -->
+    <section class="top100-full">
+        <div class="container">
+            <div class="top100-controls">
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="audio">Audio</button>
+                    <button class="filter-btn" data-filter="video">Video</button>
+                </div>
+                <div class="top100-stats">
+                    <span><i class="fas fa-heart" style="color: var(--gold);"></i> 1.2M total votes</span>
+                    <span><i class="fas fa-eye"></i> 4.5M views</span>
+                </div>
+            </div>
+            <div class="top100-list" id="top100List">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" />
+                        <h2>Monarch-Rise <span>Music</span></h2>
+                    </div>
+                    <p>Where Talent Rises. Where Music Reigns.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="top100.html">Top 100</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe for new releases and events</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your email" required />
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Monarch-Rise Music. All rights reserved. Malawi.</p>
+                <p style="color: var(--gold); font-size: 0.8rem; margin-top: 0.3rem;">Developer: Ftech</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
