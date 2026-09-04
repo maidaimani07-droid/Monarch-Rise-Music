@@ -1,22 +1,137 @@
-/* Add these styles to your existing style.css */
+/* ===== style.css – Monarch-Rise Music ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* ===== Logo Image ===== */
+:root {
+    --black: #0b0e14;
+    --gold: #c9a84c;
+    --gold-light: #dbb95c;
+    --white: #f0ece4;
+    --purple: #2a1a3e;
+    --dark-bg: #151e2a;
+    --card-bg: #18222f;
+    --text-muted: #a5b9d0;
+}
+
+html, body {
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+    background: var(--dark-bg);
+    padding: 0.8rem 2rem;
+    border-bottom: 2px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
 .logo-img {
     height: 40px;
     width: auto;
     object-fit: contain;
 }
 
-/* ===== Hero Section - Reduced Size ===== */
+.logo i {
+    color: var(--gold);
+    font-size: 1.8rem;
+}
+
+.logo h1,
+.logo h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+}
+
+.nav-links li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 0.4rem 0;
+    border-bottom: 2px solid transparent;
+    font-size: 0.95rem;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+.hamburger {
+    display: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== Hero ===== */
 .hero {
     padding: 3rem 2rem;
-    min-height: 60vh;
+    min-height: 55vh;
     background: linear-gradient(135deg, var(--black), var(--purple));
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     overflow: hidden;
+    gap: 2rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-badge {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.3rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 .hero-content h1 {
@@ -25,9 +140,105 @@
     margin-bottom: 1rem;
 }
 
+.hero-content h1 span {
+    color: var(--gold);
+}
+
 .hero-content p {
     font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
     max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--gold-light);
+    transform: scale(1.02);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid var(--gold);
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--gold);
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid var(--gold);
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: var(--white);
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid var(--white);
+    transition: 0.3s;
+}
+
+.btn-outline-white:hover {
+    background: var(--white);
+    color: var(--black);
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .weather-widget {
@@ -51,7 +262,30 @@
     font-weight: 500;
 }
 
-/* ===== Top 100 Preview Section ===== */
+/* ===== Section Headers ===== */
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-tag {
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* ===== Top 100 Preview ===== */
 .top100-preview {
     padding: 3rem 0 4rem;
     background: var(--dark-bg);
@@ -120,153 +354,377 @@
     color: var(--gold);
 }
 
-/* ===== Top 100 Full Page ===== */
-.top100-full {
-    padding: 3rem 0 4rem;
+/* ===== Featured Artists ===== */
+.featured-artists {
+    padding: 4rem 0;
 }
 
-.top100-controls {
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.artist-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid #263340;
+    transition: 0.3s;
+}
+
+.artist-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.artist-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--gold);
 }
 
-.top100-stats {
-    display: flex;
-    gap: 1.5rem;
+.artist-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.artist-info p {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
 
-.top100-stats i {
-    margin-right: 0.3rem;
-}
-
-.top100-list {
+.artist-social {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 0.8rem;
+    margin-top: 0.8rem;
 }
 
-.top100-item {
+.artist-social a {
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+
+.artist-social a:hover {
+    color: var(--gold);
+}
+
+/* ===== Latest Releases ===== */
+.latest-releases {
+    padding: 4rem 0;
+    background: var(--dark-bg);
+}
+
+.release-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.release-card {
     background: var(--card-bg);
-    border-radius: 12px;
-    padding: 0.8rem 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    border-radius: 16px;
+    overflow: hidden;
     border: 1px solid #263340;
     transition: 0.3s;
 }
 
-.top100-item:hover {
+.release-card:hover {
+    transform: translateY(-4px);
     border-color: var(--gold);
-    background: rgba(201, 168, 76, 0.05);
 }
 
-.top100-item .rank {
-    font-weight: 700;
+.release-thumb {
+    height: 150px;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
     color: var(--gold);
-    min-width: 50px;
-    font-size: 1.1rem;
+    position: relative;
 }
 
-.top100-item .song-icon {
-    font-size: 1.8rem;
-    color: var(--gold);
-    width: 45px;
-    text-align: center;
+.release-play {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.top100-item .song-details {
-    flex: 1;
+.release-card:hover .release-play {
+    opacity: 1;
 }
 
-.top100-item .song-details h4 {
+.release-info {
+    padding: 1rem;
+}
+
+.release-info h4 {
     font-size: 1rem;
+    margin-bottom: 0.2rem;
 }
 
-.top100-item .song-details p {
+.release-info p {
     color: var(--text-muted);
     font-size: 0.85rem;
 }
 
-.top100-item .song-meta {
-    display: flex;
-    gap: 1.5rem;
-    color: var(--text-muted);
-    font-size: 0.8rem;
-}
-
-.top100-item .song-meta i {
-    color: var(--gold);
-    margin-right: 0.3rem;
-}
-
-.top100-item .song-actions {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.top100-item .song-actions button {
-    padding: 0.3rem 0.8rem;
-    border-radius: 30px;
-    border: none;
-    font-size: 0.75rem;
+.release-type {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 0.65rem;
     font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 30px;
+    margin-top: 0.3rem;
+}
+
+.center-btn {
+    text-align: center;
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--purple), var(--black));
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: var(--dark-bg);
+    padding: 3rem 0 1rem;
+    border-top: 2px solid var(--gold);
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand .logo {
+    margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.footer-social a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--gold);
+}
+
+.footer-links h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--gold);
+}
+
+.footer-newsletter p {
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+.footer-newsletter form {
+    display: flex;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #263340;
+    background: var(--black);
+    color: var(--white);
+}
+
+.footer-newsletter button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0 30px 30px 0;
+    border: none;
+    background: var(--gold);
+    color: var(--black);
     cursor: pointer;
     transition: 0.3s;
 }
 
-.btn-vote {
-    background: var(--gold);
-    color: var(--black);
-}
-
-.btn-vote:hover {
+.footer-newsletter button:hover {
     background: var(--gold-light);
-    transform: scale(1.02);
 }
 
-.btn-play-small {
-    background: transparent;
-    color: var(--white);
-    border: 1px solid #263340;
-}
-
-.btn-play-small:hover {
-    border-color: var(--gold);
-    color: var(--gold);
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #263340;
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: 50vh;
+        padding: 2rem 1.5rem;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-content p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-container {
+        flex-wrap: wrap;
+    }
     .hero-content h1 {
         font-size: 2rem;
     }
-    .hero {
-        min-height: 50vh;
-        padding: 2rem 1rem;
+    .section-header h2 {
+        font-size: 1.8rem;
     }
-    .top100-controls {
-        flex-direction: column;
-        align-items: stretch;
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
-    .top100-stats {
+    .footer-social {
         justify-content: center;
     }
-    .top100-item {
-        flex-wrap: wrap;
-        padding: 0.8rem;
-    }
-    .top100-item .song-meta {
-        flex-wrap: wrap;
-        gap: 0.8rem;
+    .footer-newsletter form {
+        max-width: 300px;
+        margin: 0 auto;
     }
     .top100-preview-grid {
         grid-template-columns: 1fr;
+    }
+    .artist-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .release-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    .artist-grid {
+        grid-template-columns: 1fr;
+    }
+    .release-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    .logo-img {
+        height: 30px;
     }
 }

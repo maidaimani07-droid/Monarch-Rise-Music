@@ -9,11 +9,10 @@
     <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" />
+                <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" onerror="this.style.display='none'" />
                 <h1>Monarch-Rise <span>Music</span></h1>
             </div>
             <ul class="nav-links">
@@ -32,41 +31,27 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
             <h1><i class="fas fa-chart-line" style="color: var(--gold);"></i> Top 100 Malawi Hits</h1>
-            <p>Voted by fans · Updated daily · The ultimate chart</p>
+            <p>Voted by fans · Updated daily</p>
         </div>
     </section>
 
-    <!-- Top 100 Full List -->
     <section class="top100-full">
         <div class="container">
-            <div class="top100-controls">
-                <div class="filter-bar">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="audio">Audio</button>
-                    <button class="filter-btn" data-filter="video">Video</button>
-                </div>
-                <div class="top100-stats">
-                    <span><i class="fas fa-heart" style="color: var(--gold);"></i> 1.2M total votes</span>
-                    <span><i class="fas fa-eye"></i> 4.5M views</span>
-                </div>
-            </div>
             <div class="top100-list" id="top100List">
-                <!-- Will be populated by JavaScript -->
+                <!-- Populated by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" />
+                        <img src="assets/logo.png" alt="Monarch-Rise Music" class="logo-img" onerror="this.style.display='none'" />
                         <h2>Monarch-Rise <span>Music</span></h2>
                     </div>
                     <p>Where Talent Rises. Where Music Reigns.</p>
